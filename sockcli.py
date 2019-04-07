@@ -43,13 +43,13 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
 
 	#cargamos entero a memoria
 	print('cargando song.mp3')
-	f = open('song.mp3', "rb")
+	f = open('song3.mp3', "rb")
 	buff = f.read();
 	f.close()
 
 	print('enviando song.mp3')
 	
-	'''#en partes
+	#en partes
 	SENDONLY = 1024*181#KB
 	SLEEP = 6#KB
 	totsent = 0
@@ -57,10 +57,11 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
 	#time.sleep(SLEEP)
 	totsent+=socksendb(buff,totsent,SENDONLY)
 	time.sleep(SLEEP)
+	sent = sock.send(b'\x01'*500)
 	totsent+=socksendb(buff,totsent,SENDONLY)
 
-	time.sleep(12)'''
-	sent = sock.send( buff )
+	time.sleep(12)
+	'''sent = sock.send( buff )
 	print('sent ' + b2hum(sent))
 	
 
@@ -80,4 +81,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
 
 	sock.send(EOF_SEQ)
 	print('sent EOF')
-print('chau')
+print('chau')'''

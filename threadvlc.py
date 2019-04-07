@@ -65,10 +65,10 @@ def _thread_vlc_wr(_vlcproc,_eof_q,_vlcqueue):
                 elif msg[:85]==b'main input error: ES_OUT_SET_(GROUP_)PCR  is called too late (pts_delay increased to ':
                     #sacamos los numeros
                     lag=''.join([ c if c.isnumeric() else '' for c in msg[85:].decode("utf-8", "strict") ])
-                    print('Vlc lag',lag+'ms');
-                elif msg[:72]==b'main input error: ES_OUT_SET_(GROUP_)PCR  is called too late (jitter of '
+                    print('Vlc lag[p] '+lag+'ms');
+                elif msg[:72]==b'main input error: ES_OUT_SET_(GROUP_)PCR  is called too late (jitter of ':
                     lag=''.join([ c if c.isnumeric() else '' for c in msg[72:].decode("utf-8", "strict") ])
-                    print('Vlc lag',lag+'ms');
+                    print('Vlc lag[j] '+lag+'ms');
                 else:
                     print('Vlc err:',msg);
         except OSError:
