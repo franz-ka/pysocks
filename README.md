@@ -1,5 +1,5 @@
 # pysocks
-python tcp socket server client app
+python multithread tcp-socket server-and-client app
 
 uso: python3 main.py
 para prender el servidor en localhost:65432
