@@ -19,6 +19,6 @@ el servidor despues de validar la conexion espera un nuevo \<comando> de la list
   
 el cliente envia un \<comando>
 
-en este caso el comando <data> hace que el servidor abra vlc y reproduzca song.mp3
+en este caso el comando \<data> hace que el servidor abra vlc y reproduzca song.mp3
   
 el cliente envia el comando \<data> y transfiere los bytes de song.mp3
