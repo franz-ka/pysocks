@@ -12,6 +12,6 @@ para prender el cliente
 
 El cliente sockcli.py esta en constante modificacion, no lo reviso antes de subirlo, es con el que se testea el servidor
 
-En este momento el cliente busca una cancion song.mp3 (que no esta en el repositorio) en su mismo directorio y se la envia al servidor. Este recibe song.mp3 y se la reproduce con vlc, al comando 'vlc -'
+En este momento el cliente busca una cancion song.mp3 (que no esta en el repositorio) en su mismo directorio y se la envia al servidor. Este recibe song.mp3 y la reproduce con vlc (usando el comando 'vlc -' en otro thread)
 
-Si hay desconexiones o solo se envian segmentos de canciones todo bien, el servidor siempre reproduce lo que le llegue, cuando le llegue y vuelve al estado de listen.
+Si hay desconexiones, solo se envian segmentos de canciones, o se envian segmentos de distintas canciones, todo bien, el servidor siempre reproduce lo que le llegue, cuando le llegue, y vuelve al estado de escuchar conexiones.
