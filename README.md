@@ -1,5 +1,7 @@
 # pysocks
-python multithread tcp-socket server-and-client app
+Servidor tcp en python usando socket api, multithreading, nonblocking io y VLC player
+
+El protocolo para enviarle audio al servidor es: [bytes llave de acceso]["data"][bytes sonido a reproducir....
 
 uso: 'python3 main.py'
 para prender el servidor en localhost:65432
@@ -7,8 +9,12 @@ para prender el servidor en localhost:65432
 uso: 'python3 sockcli.py'
 para prender el cliente
 
+
+El cliente sockcli.py esta en constante modificacion, no lo reviso antes de subirlo, es con el que se testea el servidor
+
 en este momento el cliente busca una cancion song.mp3 (que no esta en el repositorio) en su mismo directorio y se la envia al servidor
 el servidor recibe song.mp3 y se la manda a vlc, al comando 'vlc -'
+
 
 Desglosado de como se comunican:
 
